@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp
+  spec="1.0+"
+  codebase="http://restlesscoder.net/sites/restlesscoder.net/files"
+  href="ThumbMaker.jnlp">
+  <information>
+    <title>ThumbMaker</title>
+    <vendor>restlesscoder.net</vendor>
+    <homepage href="/software/thumbmaker"/>
+    <description>A program for batch thumbnail creation.</description>
+    <offline-allowed/>
+  </information>
+  <security>
+    <all-permissions/>
+  </security>
+  <resources>
+    <j2se version="1.4+"/>
+    <jar href="thumbmaker.jar"/>
+  </resources>
+  <application-desc main-class="restless.thumbmaker.ThumbMaker"/>
+</jnlp>

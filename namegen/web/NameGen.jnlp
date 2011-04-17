@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp
+  spec="1.0+"
+  codebase="http://restlesscoder.net/sites/restlesscoder.net/files"
+  href="NameGen.jnlp">
+  <information>
+    <title>NameGen</title>
+    <vendor>restlesscoder.net</vendor>
+    <homepage href="/software/namegen"/>
+    <description>A program for generating random names.</description>
+    <offline-allowed/>
+  </information>
+  <security>
+    <all-permissions/>
+  </security>
+  <resources>
+    <j2se version="1.4+"/>
+    <jar href="namegen.jar"/>
+    <jar href="forms-1.2.1.jar"/>
+  </resources>
+  <application-desc main-class="restless.namegen.NameGen"/>
+</jnlp>

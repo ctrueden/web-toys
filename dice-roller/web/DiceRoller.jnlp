@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp
+  spec="1.0+"
+  codebase="http://restlesscoder.net/sites/restlesscoder.net/files"
+  href="DiceRoller.jnlp">
+  <information>
+    <title>DiceRoller</title>
+    <vendor>restlesscoder.net</vendor>
+    <homepage href="/software/dice-roller"/>
+    <description>A program for automatic dice rolling</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.4+"/>
+    <jar href="dice-roller.jar"/>
+  </resources>
+  <application-desc main-class="restless.dice.DiceRoller"/>
+</jnlp>
