@@ -12,7 +12,7 @@
 	</parent>
 
 	<artifactId>thumbmaker</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 
 	<name>Thumbnail Maker</name>
 	<description>A program for batch thumbnail creation.</description>
