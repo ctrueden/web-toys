@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+namegen.mxml
+
+NameGen Flex style, coded in 2007 by Curtis Rueden
+This code is dedicated to the public domain.
+All copyrights (and warranties) are disclaimed.
+-->
+
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+  pageTitle="Name Generator" layout="vertical" applicationComplete="initNames()">
+
+  <mx:Script source="namegen.as"/>
+  <mx:Style source="namegen.css"/>
+
+  <mx:Panel layout="vertical" title="Name Generator"
+    paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="10">
+
+    <!-- token source -->
+    <mx:Grid>
+      <mx:GridRow>
+        <mx:GridItem>
+          <mx:RadioButton groupName="source" label="Preset" selected="true"/>
+        </mx:GridItem>
+        <mx:GridItem>
+          <mx:ComboBox id="presets" dataProvider="{presetValues}"
+            close="initNames()"/>
+        </mx:GridItem>
+      </mx:GridRow>
+      <mx:GridRow>
+        <mx:GridItem>
+          <mx:RadioButton groupName="source" label="Custom" enabled="false"/>
+        </mx:GridItem>
+        <mx:GridItem>
+          <mx:TextInput enabled="false"/>
+        </mx:GridItem>
+        <mx:GridItem>
+          <mx:Button label="Choose file..." enabled="false"/>
+        </mx:GridItem>
+      </mx:GridRow>
+    </mx:Grid>
+
+    <!-- similarity selector -->
+    <mx:HBox>
+      <mx:Label text="Similarity"/>
+      <mx:RadioButton id="deviant" groupName="similarity" label="Deviant"
+        click="initNames()"/>
+      <mx:RadioButton id="balanced" groupName="similarity" label="Balanced"
+        click="initNames()" selected="true"/>
+      <mx:RadioButton id="similar" groupName="similarity" label="Similar"
+        click="initNames()"/>
+    </mx:HBox>
+
+    <!-- name count and generation button -->
+    <mx:HBox>
+      <mx:Label text="Number of names"/>
+      <mx:NumericStepper id="number" minimum="1" maximum="1000" value="5"/>
+      <mx:Button label="Generate" click="genNames()"/>
+      <mx:Button label="Clear" click="clearNames()"/>
+    </mx:HBox>
+
+    <!-- output box -->
+    <mx:TextArea id="output" editable="false" width="100%" minHeight="200"/>
+
+  </mx:Panel>
+
+</mx:Application>

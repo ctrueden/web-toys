@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+build.xml
+
+Build file for Name Generator Flex project.
+Download Apache Ant from http://ant.apache.org/.
+Type "ant -p" for a list of targets.
+
+===============================================================================
+The following external dependencies (in the jar folder) are required:
+
+Flex Ant Tasks
+    JAR file:  flexTasks.jar
+    URL:       http://labs.adobe.com/wiki/index.php/Flex_Ant_Tasks
+    Notes:     Used for core flex ant tasks
+    License:   Custom (free to use)
+-->
+
+<project name="Hello" default="compile" basedir=".">
+  <description>
+    Build file for Name Generator Flex project
+  </description>
+
+  <property name="FLEX_HOME" value="/home/curtis/apps/flex"/>
+  <property name="APP_ROOT" value="."/>
+
+  <!-- Non-core ant tasks -->
+
+  <taskdef resource="flexTasks.tasks"
+    classpath="${basedir}/../jar/flexTasks.jar" />
+
+  <!-- Global build targets -->
+
+  <target name="init">
+    <tstamp>
+      <format property="DATE" pattern="d MMMMM yyyy"/>
+      <format property="YEAR" pattern="yyyy"/>
+    </tstamp>
+  </target>
+
+  <target name="compile">
+    <mxmlc file="${APP_ROOT}/namegen.mxml" incremental="true"
+      keep-generated-actionscript="true">
+      <load-config filename="${FLEX_HOME}/frameworks/flex-config.xml"/>
+      <source-path path-element="${FLEX_HOME}/frameworks"/>
+    </mxmlc>
+  </target>
+
+  <target name="clean">
+    <delete>
+      <fileset dir="." includes="*.swf"/>
+      <fileset dir="." includes="*.cache"/>
+    </delete>
+    <delete dir="generated"/>
+  </target>
+
+</project>
