@@ -9,7 +9,7 @@ This Java Web Start application asks for full system privileges, but the only
 reason it needs them is so that you can specify a custom dictionary text file
 from your file system, rather than merely using the built-in male, female and
 surname presets. If granting this sort of access bothers you, feel free to use
-the [Flex version](name-generator-flex-style) instead.
+the [Flex version](../namegen-flex) instead.
 
 I am not special. This program has been written many times in many languages
 for many purposes. Here are a couple other random text generators that use
