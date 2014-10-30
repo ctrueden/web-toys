@@ -1,5 +1,4 @@
 <img align="right" src="screenshot.jpg">
-
 This name generator outputs random names using an algorithm based on [Markov
 chains](http://en.wikipedia.org/wiki/Markov_chains). It works by generating
 tokens of a fixed length based on an input dictionary—in our case, a list of

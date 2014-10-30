@@ -1,5 +1,4 @@
 <img align="right" src="screenshot.png">
-
 I wrote a compact GUI for doing computerized rolling of polyhedral dice. This
 program has been written many times using JavaScript, but less many in Java
 Swing—I guess Java is my hammer.

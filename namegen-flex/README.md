@@ -1,5 +1,4 @@
 <img align="right" src="screenshot.jpg">
-
 I wrote a [random name generator in Java](../namegen) some time ago. As an
 exercise to learn Adobe Flex, I decided to port the application. Most of it
 works, but I ran into a couple of problems.

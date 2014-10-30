@@ -1,5 +1,4 @@
 <img align="right" src="screenshot.jpg">
-
 Codebreaker is a game from the arcade in
 [Revelations: Persona](https://en.wikipedia.org/wiki/Revelations:_Persona),
 similar to [Mastermind](https://en.wikipedia.org/wiki/Mastermind_(board_game))
